@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+#todo-app {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+  width: 480px; /* Increased width for better layout */
+  margin-top: 40px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"], input[type="datetime-local"] {
+  flex: 2 1 150px;
+  min-width: 0;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  flex: 1 1 80px;
+  min-width: 80px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: #555;
+}
+
+#lists {
+  margin-bottom: 20px;
+}
+
+.list-item {
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item.selected {
+  background: #d0eaff;
+}
+
+.list-actions button {
+  margin-left: 5px;
+  background: #eee;
+  color: #333;
+  border: none;
+  border-radius: 3px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.list-actions button:hover {
+  background: #ddd;
+}
+
+#task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.task-title.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.task-actions button {
+  margin-left: 5px;
+  background: #eee;
+  color: #333;
+  border: none;
+  border-radius: 3px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.task-actions button:hover {
+  background: #ddd;
+}
+
+.task-datetime {
+  font-size: 0.9em;
+  color: #666;
+  margin-left: 10px;
+}
+
+#back-to-lists {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+#back-to-lists:hover {
+  background: #555;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
+  #todo-app {
+    width: 98vw;
+    padding: 10px;
+  }
+  form {
+    flex-direction: column;
+    gap: 8px;
+  }
+  button[type="submit"] {
+    width: 100%;
+    min-width: 0;
+  }
+}
